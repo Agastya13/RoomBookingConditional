@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { faBed, faPlusCircle, faMinusCircle, faUser, faChild, faUsers } from "@fortawesome/free-solid-svg-icons";
-import './App.css';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-export class App extends Component {
+export class Main extends Component {
               state = {
                       rooms: 1,
                       adults: 0,
@@ -112,11 +112,11 @@ export class App extends Component {
               }
       render() {
               return (
-                      <div className="items">
+                      <div className="items   ">
                               <span className=" text"><FontAwesomeIcon icon={faUsers} /><span className="px-2">Choose No Of People</span></span>
                               <div className="border border-dark wd">
-                                      <div className=" borders">
-                                              <div className="mx-3 my-3 pt-3">
+                                      <div className=" borders   ">
+                                              <div className="mt-3">
                                                       <span className=" text"><FontAwesomeIcon icon={faBed} /><span className="px-2">ROOMS</span></span>
                                                       <span className="px-2 marginroom text " onClick={this.handleRoomminusClick}><FontAwesomeIcon icon={faMinusCircle} /></span>
                                                       {this.state.rooms}
@@ -124,16 +124,16 @@ export class App extends Component {
                                               </div>
                                       </div>
 
-                                      <div className="borders">
-                                              <div className="mx-3 my-3">
+                                      <div className=" borders">
+                                              <div className="mt-3">
                                                       <span className=" text"><FontAwesomeIcon icon={faUser} /><span className="px-3">ADULTS</span></span>
                                                       <span className="px-2 marginadult text" onClick={this.handleAdultminusClick}><FontAwesomeIcon icon={faMinusCircle} /></span>
                                                       {this.state.adults}
                                                       <span className="text-danger px-2" onClick={this.handleAdultplusClick}><FontAwesomeIcon icon={faPlusCircle} /></span>
                                               </div>
                                       </div>
-                                      <div className="borders" >
-                                              <div className="mx-3 my-3" disabled>
+                                      <div className=" borders" >
+                                              <div className="mt-3" disabled>
                                                       <span className="text"><FontAwesomeIcon icon={faChild} /><span className="px-3">CHILDREN</span></span>
                                                       <span className="px-2 marginchild text" onClick={this.handleChildminusClick}><FontAwesomeIcon icon={faMinusCircle} /></span>
                                                       {this.state.children}
@@ -148,4 +148,4 @@ export class App extends Component {
       }
 }
 
-export default App
+export default Main
